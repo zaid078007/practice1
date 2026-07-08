@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static HTML Document</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-dark: #1e293b;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #64748b;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero-section {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            color: #475569;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .interactive-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+            transition: transform 0.1s, background-color 0.2s;
+        }
+
+        .interactive-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .interactive-btn:active {
+            transform: scale(0.98);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 6rem;
+            background-color: #0f172a;
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">StaticSite</div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <h1>Lightning Fast Static HTML</h1>
+        <p>This layout uses clean, semantic code structure. Click below to view basic client-side functionality.</p>
+        <button class="interactive-btn" id="actionBtn">Click Me</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StaticSite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('actionBtn').addEventListener('click', () => {
+            alert('Hello! This alert runs purely inside your browser without needing any server processing.');
+        });
+    </script>
+
+</body>
+</html>
